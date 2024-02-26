@@ -15,20 +15,25 @@ server.get("/saludo", (req, res) => {
 });
 
 // CREO LA CONEXION
+server.post("/conexion", (req, res) => {
+const datos = req.body;
+
+//Conexion MYSQL
 const conexion = mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: '',
-        database: 'form_conection'
+        host: datos.servidor,
+        user: datos.username,
+        password: datos.password,
+        database: datos.baseDatos
       });
 
       conexion.connect(err => {
         if (err) {
-          console.log('Error en la conexion MySQL: ' + err);
+          res.json('Error en la conexion MySQL: ' + err);
         } else {
-          console.log('Conexión correcta a MySQL!');
+          res.json('Conexión correcta a MySQL!');
         }
       });
+    });
       
 
       //LEVANTAR EL PUERTO
