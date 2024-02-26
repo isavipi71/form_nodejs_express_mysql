@@ -1,0 +1,20 @@
+{
+  "name": "form_nodejs_express_mysql",
+  "version": "1.0.0",
+  "description": "coneccion de un formulario con mysql - express - node",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "htpps://github.com/isavipi71/form_nodejs_express_mysql.git"
+  },
+  "author": "Isabel Viejo",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1"
+  }
+}
